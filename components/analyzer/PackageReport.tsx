@@ -108,7 +108,8 @@ export default function PackageReport({ report }: Props) {
                   ))}
                 </Pie>
                 <Tooltip
-                  formatter={(value: number | string) => formatCurrency(Number(value))}
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  formatter={(value: any) => formatCurrency(Number(value))}
                   contentStyle={{
                     background: '#0F2B46',
                     border: 'none',
